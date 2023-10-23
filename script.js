@@ -3,6 +3,7 @@ window.onload = () =>
     const regExName = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
     const regExEmail = /([\w\.]+)@([\w\.]+)\.(\w+)/;
     const regExNEUID = /\d{9}$/;
+    const regExPhone = /\d{3}-?\d{3}-\d{4}$/;
 
     const display = (elementName, isInValid) => 
     {
@@ -18,7 +19,7 @@ window.onload = () =>
         }
     }
 
-    let isNameInValid = true, isEmailInValid = true, isNEUIDInValid = true;
+    let isNameInValid = true, isEmailInValid = true, isNEUIDInValid = true, isPhoneNumberInValid = true;
     const validate = event => 
     {
         console.log('input');
@@ -26,7 +27,7 @@ window.onload = () =>
 
         switch(id) 
         {
-            case "name":
+            case "signupName":
                 if(!value.trim().toLowerCase().match(regExName)) 
                 {
                     display(name, true);
@@ -39,7 +40,7 @@ window.onload = () =>
                     isNameInValid = false;
                 }
                 break;
-            case "email":
+            case "signupEmail":
                 if(!value.trim().toLowerCase().match(regExEmail)) {
                     display(name, true);
                     isEmailInValid = true;
@@ -49,8 +50,8 @@ window.onload = () =>
                     isEmailInValid = false;
                 }
                 break;
-            case "phoneNumber":
-                if(!value.trim().toLowerCase().match(regExPhone)) {
+            case "NEUID":
+                if(!value.trim().toLowerCase().match(regExNEUID)) {
                     display(name, true);
                     isNEUIDInValid = true;
                 } else {
@@ -58,10 +59,19 @@ window.onload = () =>
                     isNEUIDInValid = false;
                 }
                 break; 
+            case "phoneNumber":
+                if(!value.trim().toLowerCase().match(regExPhone)) {
+                    display(name, true);
+                    isPhoneNumberInValid = true;
+                } else {
+                    display(name, false);
+                    isPhoneNumberInValid = false;
+                }
+                break;
                 
         }
 
-        if(isNameInValid || isEmailInValid || isNEUIDInValid ) {
+        if(isNameInValid || isEmailInValid || isNEUIDInValid || isPhoneNumberInValid) {
             document.myForm.submit.setAttribute('disabled', true);
         } else {
             document.myForm.submit.removeAttribute('disabled');
@@ -73,7 +83,7 @@ window.onload = () =>
         console.log('submit');
         e.preventDefault();
 
-        if(!isNameInValid && !isEmailInValid && !isNEUIDInValid){
+        if(!isNameInValid && !isEmailInValid && !isNEUIDInValid && !isPhoneNumberInValid){
             alert("Data entered successfully");
         }
         else{
