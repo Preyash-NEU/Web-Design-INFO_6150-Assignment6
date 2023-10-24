@@ -27,7 +27,7 @@ window.onload = () =>
 
         switch(id) 
         {
-            case "signupName":
+            case "name":
                 if(!value.trim().toLowerCase().match(regExName)) 
                 {
                     display(name, true);
@@ -40,7 +40,7 @@ window.onload = () =>
                     isNameInValid = false;
                 }
                 break;
-            case "signupEmail":
+            case "email":
                 if(!value.trim().toLowerCase().match(regExEmail)) {
                     display(name, true);
                     isEmailInValid = true;
@@ -50,7 +50,7 @@ window.onload = () =>
                     isEmailInValid = false;
                 }
                 break;
-            case "NEUID":
+            case "neu-id":
                 if(!value.trim().toLowerCase().match(regExNEUID)) {
                     display(name, true);
                     isNEUIDInValid = true;
