@@ -24,7 +24,3 @@ const popoverTriggerList = document.querySelectorAll(
 const popoverList = [...popoverTriggerList].map(
   (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
 );
-
-// $(document).ready(function () {
-//   $('[data-toggle="popover"]').popover();
-// });

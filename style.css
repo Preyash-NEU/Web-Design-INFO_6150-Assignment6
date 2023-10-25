@@ -132,6 +132,50 @@ section.register-event .bottom {
   height: 300px;
 }
 
+/* Card */
+.card-container {
+  /* display: flex;
+  flex-direction: row;
+  gap: 20px; */
+  /* justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Three equal-width columns */
+  grid-gap: 40px; /* Adjust the gap between columns */
+}
+
+.card-container .card {
+  flex: 1;
+}
+
+.card-title {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.card-container img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-text.desc {
+  font-size: 14px;
+}
+
+.card-text.time {
+  color: #9634f7;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.card-text.location {
+  color: gray;
+  font-weight: 200;
+  font-size: 16px;
+}
+
 /* Toast */
 .toast {
   position: absolute;
@@ -238,6 +282,19 @@ footer .bottom {
 
   .hea .navbar-nav .nav-link.last {
     margin-right: 25px;
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .card-container img {
+    width: 100%;
   }
 }
 
