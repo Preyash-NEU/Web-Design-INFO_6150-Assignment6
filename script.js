@@ -91,6 +91,14 @@ window.onload = () =>
         }
     }
 
+    $('#spinner-container').show();
+    $('button[type="submit"]').hide();
+
+    setTimeout(function () {
+        $('#spinner-container').hide();
+        alert("Welcome to the Sign-up page");
+    }, 500);
+
     document.myForm.addEventListener('input', validate);
     document.myForm.addEventListener('submit', submitted);
 }

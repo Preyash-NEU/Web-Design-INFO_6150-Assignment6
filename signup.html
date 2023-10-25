@@ -73,14 +73,14 @@
               class="wrap-input100 validate-input"
               data-validate="Valid name is required"
             >
-              <input class="input100" type="text" name="name" id="name" required>
+              <input class="input100" type="text" name="name" id="name" required pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$">
               <span class="focus-input100"></span>
               <span class="label-input100">Name</span>
             </div>
 
             <div
               class="wrap-input100 validate-input"
-              data-validate="Valid email is required: ex@abc.xyz"
+              data-validate="Valid email is required: ex@northeastern.edu"
             >
               <input class="input100" type="text" name="email" id="email" required>
               <span class="focus-input100"></span>
@@ -141,6 +141,12 @@
 
               <div>
                 <a href="#" class="txt1"> Forgot Password? </a>
+              </div>
+            </div>
+
+            <div class="text-center mt-3" id="spinner-container" style="display: none;">
+              <div class="spinner-border" role="status">
+                <span class="visually-hidden"></span>
               </div>
             </div>
 
