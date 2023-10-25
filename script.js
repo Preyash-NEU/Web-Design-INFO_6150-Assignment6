@@ -59,7 +59,7 @@ window.onload = () =>
                     isNEUIDInValid = false;
                 }
                 break; 
-            case "phoneNumber":
+            case "number":
                 if(!value.trim().toLowerCase().match(regExPhone)) {
                     display(name, true);
                     isPhoneNumberInValid = true;
