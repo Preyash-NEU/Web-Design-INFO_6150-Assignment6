@@ -201,6 +201,7 @@ footer {
   color: rgb(246, 246, 246);
   width: 100%;
   position: relative;
+  margin-top: 20px;
 }
 
 .top {
@@ -296,6 +297,10 @@ footer .bottom {
   .card-container img {
     width: 100%;
   }
+
+  .event-container {
+    height: 100%;
+  }
 }
 
 @media screen and (max-width: 420px) {
@@ -331,6 +336,10 @@ footer .bottom {
 
   .register-event img {
     height: 200px;
+  }
+
+  .event-container {
+    height: 100%;
   }
 }
 
