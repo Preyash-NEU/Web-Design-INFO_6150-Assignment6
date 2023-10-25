@@ -96,8 +96,25 @@ window.onload = () =>
 
     setTimeout(function () {
         $('#spinner-container').hide();
-        alert("Welcome to the Sign-up page");
     }, 500);
+
+
+    $(document).ready(function () {
+        // Count the total number of form fields
+        const totalFields = $('form .input100').length;
+    
+        // Update the progress bar on input change
+        $('form .input100').on('input', function () {
+          const filledFields = $('form .input100').filter(function () {
+            return $(this).val() !== '';
+          }).length;
+    
+          const completionPercentage = (filledFields / totalFields) * 100;
+    
+          // Update the progress bar width and aria attributes
+          $('.progress-bar').css('width', completionPercentage + '%').attr('aria-valuenow', completionPercentage);
+        });
+      });
 
     document.myForm.addEventListener('input', validate);
     document.myForm.addEventListener('submit', submitted);
