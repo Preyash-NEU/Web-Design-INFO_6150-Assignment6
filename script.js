@@ -22,7 +22,6 @@ window.onload = () =>
     let isNameInValid = true, isEmailInValid = true, isNEUIDInValid = true, isPhoneNumberInValid = true;
     const validate = event => 
     {
-        console.log('input');
         const {id, value, name} = event.target;
 
         switch(id) 
@@ -71,6 +70,8 @@ window.onload = () =>
                 
         }
 
+       showHideLabelOnInput(id, value);
+
         if(isNameInValid || isEmailInValid || isNEUIDInValid || isPhoneNumberInValid) {
             document.myForm.submit.setAttribute('disabled', true);
         } else {
@@ -78,9 +79,17 @@ window.onload = () =>
         }
     }
 
+    function showHideLabelOnInput(id, val) {
+
+        if(val.length > 0) {
+            document.getElementById(`label_${id}`).style.display = "none";
+        }else {
+            document.getElementById(`label_${id}`).style.display = "block";
+        }
+    }
+
 
     function submitted(e){
-        console.log('submit');
         e.preventDefault();
 
         if(!isNameInValid && !isEmailInValid && !isNEUIDInValid && !isPhoneNumberInValid){
