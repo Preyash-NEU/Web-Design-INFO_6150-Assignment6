@@ -55,8 +55,6 @@ window.onload = () => {
         if (!value.trim().toLowerCase().match(regExName)) {
           display(name, true);
           isNameInValid = true;
-        } else if (regExName) {
-          isNameInValid = false;
         } else {
           display(name, false);
           isNameInValid = false;
