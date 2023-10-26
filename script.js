@@ -1,6 +1,6 @@
 window.onload = () => 
 {
-    const regExName = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
+    const regExName = /^[a-zA-Z\s]+$/;
     const regExEmail = /([\w\.]+)@([\w\.]+)\.(\w+)/;
     const regExNEUID = /\d{9}$/;
     const regExPhone = /\d{3}-?\d{3}-\d{4}$/;
@@ -32,10 +32,7 @@ window.onload = () =>
                 {
                     display(name, true);
                     isNameInValid = true;
-                }else if (regExName) {
-                    isNameInValid = false;
-                }
-                else {
+                }else  {
                     display(name, false);
                     isNameInValid = false;
                 }

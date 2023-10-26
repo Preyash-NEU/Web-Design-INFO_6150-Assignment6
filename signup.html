@@ -73,9 +73,13 @@
               class="wrap-input100 validate-input"
               data-validate="Valid name is required"
             >
-              <input class="input100" type="text" name="name" id="name" required pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$">
+              <input class="input100" type="text" name="name" id="name" required>
               <span class="focus-input100"></span>
               <span class="label-input100">Name</span>
+            </div>
+            <div id="error_name" style="display: none; color: red;">
+              Invalid Name, Please enter only alphabets.
+              <br><br>
             </div>
 
             <div
