@@ -1,14 +1,16 @@
-document.getElementById("toastbtn").onclick = function () {
-  var toastElList = document.getElementById("toast");
-  var toast = new bootstrap.Toast(toastElList);
-  var toastInput = document.getElementById("toast-input");
-  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (document.getElementById("toastbtn")) {
+  document.getElementById("toastbtn").onclick = function () {
+    var toastElList = document.getElementById("toast");
+    var toast = new bootstrap.Toast(toastElList);
+    var toastInput = document.getElementById("toast-input");
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  if (!toastInput.value || !emailRegex.test(toastInput.value)) return;
+    if (!toastInput.value || !emailRegex.test(toastInput.value)) return;
 
-  toast.show();
-  toastInput.value = "";
-};
+    toast.show();
+    toastInput.value = "";
+  };
+}
 
 const tooltipTriggerList = document.querySelectorAll(
   '[data-bs-toggle="tooltip"]'
