@@ -1,7 +1,7 @@
 window.onload = () => 
 {
     const regExName = /^[a-zA-Z\s]+$/;
-    const regExEmail = /([\w\.]+)@([\w\.]+)\.(\w+)/;
+    const regExEmail = /^[a-zA-Z0-9._%+-]+@northeastern\.edu$/;
     const regExNEUID = /\d{9}$/;
     const regExPhone = /\d{3}-?\d{3}-\d{4}$/;
 
