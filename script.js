@@ -11,18 +11,18 @@ document.getElementById("toastbtn").onclick = function () {
 };
 
 const tooltipTriggerList = document.querySelectorAll(
-  '[data-bs-toggle="tooltip"]',
+  '[data-bs-toggle="tooltip"]'
 );
 console.log("Hello    tooltipTriggerList:", tooltipTriggerList);
 const tooltipList = [...tooltipTriggerList].map(
-  (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl),
+  (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
 );
 
 const popoverTriggerList = document.querySelectorAll(
-  '[data-bs-toggle="popover"]',
+  '[data-bs-toggle="popover"]'
 );
 const popoverList = [...popoverTriggerList].map(
-  (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl),
+  (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
 );
 
 window.onload = () => {

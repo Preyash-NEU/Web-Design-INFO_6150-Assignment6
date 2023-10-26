@@ -1,7 +1,16 @@
+@font-face {
+  font-family: Poppins-Regular;
+  src: url("../fonts/poppins/Poppins-Regular.ttf");
+}
+
+body,
+html {
+  font-family: Poppins-Regular, sans-serif;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between !important;
-  margin-bottom: 20px;
 }
 
 /* .navbar .links {
@@ -61,6 +70,15 @@ button.btn-primary-color {
   display: flex;
   flex-direction: row;
   gap: 10px;
+}
+
+button.about-us {
+  outline: none;
+  border: none;
+}
+
+.container.event-container.about-us {
+  padding: 10px;
 }
 
 .hero-container {
